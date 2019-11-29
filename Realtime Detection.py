@@ -30,7 +30,7 @@ def draw_rectangle(img, classifier, scale, minNeighbour, text, color, font_famil
 
 # Initializing Face cascade with XML file from GIT
 faceCascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-bananaCascade = cv2.CascadeClassifier('banana_classifier.xml')
+bananaCascade = cv2.CascadeClassifier('BananaCascade.xml')
 # Capturing the Live stream video
 video_capture = cv2.VideoCapture(0)  # 0 for built-in's and -1 for external video cameras
 
