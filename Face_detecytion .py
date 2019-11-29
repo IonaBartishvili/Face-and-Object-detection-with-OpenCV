@@ -4,7 +4,7 @@ import cv2
 face_cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
 
 # Read the image and convert to grayscale format
-img = cv2.imread('people3.jpg')
+img = cv2.imread('faces.png')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 # Calculate coordinates
@@ -14,10 +14,10 @@ for (x,y,w,h) in faces:
     #                    |          |         |       |
     cv2.rectangle(img, (x,y), (x+w, y+h), (0,0,255), 3)
     #                    text       position          FONT             Scale   RGB       Thickness
-    cv2.putText(img, 'Human face', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
+    cv2.putText(img, 'face', (x, y-10), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0,0,255), 2)
 
 
-img = cv2.resize(img, (438, 584))
+img = cv2.resize(img, (860, 460))
 # Show the image
 cv2.imshow('image', img)
 cv2.waitKey(0)
